@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="622.0" style="-fx-background-color: #212F3D;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.startController"> 
+   <center>
+      <Pane fx:id="center" prefHeight="609.0" prefWidth="622.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="pane2" layoutX="13.0" layoutY="10.0" prefHeight="584.0" prefWidth="599.0" style="-fx-background-color: #B3B6B7;">
+               <children>
+                  <Pane prefHeight="76.0" prefWidth="603.0" style="-fx-background-color: #212F3D;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="10.0" prefHeight="56.0" prefWidth="239.0" text="Add New Project" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Label layoutX="224.0" layoutY="98.0" text="Project Charter" textFill="#212f3d">
+                     <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                     </font>
+                  </Label>
+                  <TabPane layoutX="6.0" layoutY="138.0" prefHeight="444.0" prefWidth="587.0" style="-fx-background-color: #B3B6B7;" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Part one">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane prefHeight="419.0" prefWidth="568.0" style="-fx-background-color: ##212F3D">
+                                       <children>
+                                          <Label prefHeight="23.0" prefWidth="112.0" text="Project Name" textFill="#212f3d">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="name" onAction="#checkInputText" prefHeight="35.0" prefWidth="435.0" GridPane.columnIndex="1" />
+                                          <TextField fx:id="sponsor" onAction="#checkInputText" prefHeight="35.0" prefWidth="435.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Label text="Project Sponser" textFill="#212f3d" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Project Manager" textFill="#212f3d" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="manager" onAction="#checkInputText" prefHeight="34.0" prefWidth="435.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <Label text="Project Description" textFill="#212f3d" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextArea fx:id="description" prefHeight="71.0" prefWidth="414.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <Label text="Scope" textFill="#212f3d" GridPane.rowIndex="4">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextArea fx:id="scope1" prefHeight="88.0" prefWidth="414.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <Label text="Constraints" textFill="#212f3d" GridPane.rowIndex="5">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <GridPane prefHeight="109.0" prefWidth="403.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                             <children>
+                                                <Label text="2)Quality" textFill="#212f3d" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font name="Berlin Sans FB" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="1)Time" textFill="#212f3d">
+                                                   <font>
+                                                      <Font name="Berlin Sans FB" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="3)Budget" textFill="#212f3d" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font name="Berlin Sans FB" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="time" GridPane.columnIndex="1" />
+                                                <TextField fx:id="quality" onAction="#checkInputText" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <TextField fx:id="budget" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Label text="4) Scope" textFill="#212f3d" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font name="Berlin Sans FB" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="scope" onAction="#checkInputText" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="77.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="340.0" minWidth="10.0" prefWidth="337.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="10.0" prefWidth="154.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="435.0" minWidth="10.0" prefWidth="414.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="126.0" minHeight="5.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="316.0" minHeight="0.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="338.0" minHeight="0.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="338.0" minHeight="10.0" prefHeight="86.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="338.0" minHeight="0.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="338.0" minHeight="0.0" prefHeight="95.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="338.0" minHeight="0.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Part two">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane prefHeight="419.0" prefWidth="568.0" style="-fx-background-color: ##212F3D">
+                                       <children>
+                                          <Label prefHeight="23.0" prefWidth="172.0" text="Constraints" textFill="#212f3d">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Benefits" textFill="#212f3d" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextArea fx:id="reqs" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                             <GridPane.margin>
+                                                <Insets top="10.0" />
+                                             </GridPane.margin></TextArea>
+                                          <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <right>
+                                                <GridPane prefHeight="162.0" prefWidth="402.0" BorderPane.alignment="CENTER">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="125.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="144.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="173.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="KPI" textFill="#212f3d">
+                                                         <font>
+                                                            <Font name="Berlin Sans FB" size="18.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="40.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <Label text="Baseline" textFill="#212f3d" GridPane.columnIndex="1">
+                                                         <font>
+                                                            <Font name="Berlin Sans FB" size="18.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="40.0" />
+                                                         </padding>
+                                                      </Label>
+                                                      <Label text="Scope" textFill="#212f3d" GridPane.columnIndex="2">
+                                                         <font>
+                                                            <Font name="Berlin Sans FB" size="18.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets left="40.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <TextField fx:id="kp1" GridPane.rowIndex="1" />
+                                                      <TextField GridPane.rowIndex="3" />
+                                                      <TextField fx:id="kp4" GridPane.rowIndex="4" />
+                                                      <TextField fx:id="bs1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="bs3" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="kp3" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="sc1" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                      <TextField fx:id="sc2" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="bs2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="kp2" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="sc3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="sc4" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                                      <TextField fx:id="bs4" prefHeight="25.0" prefWidth="131.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                   </children>
+                                                </GridPane>
+                                             </right>
+                                          </BorderPane>
+                                          <Label prefHeight="58.0" prefWidth="153.0" text="Project Team" textFill="#212f3d" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <TextField fx:id="team1" onAction="#checkInputText" prefHeight="45.0" prefWidth="207.0" />
+                                                <TextField fx:id="team3" onAction="#checkInputText" prefHeight="43.0" prefWidth="207.0" GridPane.rowIndex="1" />
+                                                <TextField fx:id="team5" onAction="#checkInputText" prefHeight="42.0" prefWidth="207.0" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </GridPane.margin></TextField>
+                                                <TextField fx:id="team2" onAction="#checkInputText" prefHeight="43.0" prefWidth="206.0" GridPane.columnIndex="1" />
+                                                <TextField fx:id="team4" onAction="#checkInputText" prefHeight="44.0" prefWidth="206.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <TextField fx:id="team6" onAction="#checkInputText" prefHeight="40.0" prefWidth="206.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </GridPane.margin></TextField>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="10.0" prefWidth="165.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="435.0" minWidth="10.0" prefWidth="403.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="126.0" minHeight="5.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="338.0" minHeight="0.0" prefHeight="147.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="338.0" minHeight="0.0" prefHeight="146.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="Part three">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <BorderPane layoutX="2.0" layoutY="-1.0" prefHeight="418.0" prefWidth="588.0">
+                                       <center>
+                                          <GridPane BorderPane.alignment="CENTER">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="287.0" minWidth="10.0" prefWidth="151.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="470.0" minWidth="10.0" prefWidth="437.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Stakeholders" textFill="#212f3d">
+                                                   <font>
+                                                      <Font name="Berlin Sans FB" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <GridPane GridPane.columnIndex="1">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Names" textFill="#212f3d">
+                                                         <font>
+                                                            <Font name="Berlin Sans FB" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="Success Criteria" textFill="#212f3d" GridPane.columnIndex="1">
+                                                         <font>
+                                                            <Font name="Berlin Sans FB" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="st1" onAction="#checkInputText" GridPane.rowIndex="1" />
+                                                      <TextField fx:id="st3" onAction="#checkInputText" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="st2" onAction="#checkInputText" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="cr1" onAction="#checkInputText" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <TextField fx:id="cr2" onAction="#checkInputText" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="cr3" onAction="#checkInputText" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                   </children>
+                                                </GridPane>
+                                                <TextArea fx:id="risks" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Label text="Risks" textFill="#212f3d" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font name="Berlin Sans FB" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Project Deliverables" textFill="#212f3d" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font name="Berlin Sans FB" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Assumptions" textFill="#212f3d" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font name="Berlin Sans FB" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextArea fx:id="deliverables" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <TextArea fx:id="assumption" prefHeight="92.0" prefWidth="417.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </GridPane.margin></TextArea>
+                                             </children>
+                                          </GridPane>
+                                       </center>
+                                    </BorderPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Part four">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <BorderPane layoutX="2.0" prefHeight="414.0" prefWidth="583.0">
+                                       <top>
+                                          <GridPane prefHeight="197.0" prefWidth="583.0" BorderPane.alignment="CENTER">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="285.0" minWidth="10.0" prefWidth="170.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="413.0" minWidth="10.0" prefWidth="413.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Project Start Date" textFill="#212f3d">
+                                                   <font>
+                                                      <Font name="Berlin Sans FB" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Project End date" textFill="#212f3d" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font name="Berlin Sans FB" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Duration" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font name="Berlin Sans FB" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="duration" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <CheckBox fx:id="confirm" mnemonicParsing="false" text="I confirm that provided information is correct and rechecked." GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font name="Berlin Sans FB" size="14.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <DatePicker fx:id="start" prefHeight="32.0" prefWidth="413.0" GridPane.columnIndex="1" />
+                                                <DatePicker fx:id="end" onAction="#checkInputText" prefHeight="31.0" prefWidth="413.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                             </children>
+                                          </GridPane>
+                                       </top>
+                                       <left>
+                                          <Button fx:id="submit" alignment="CENTER" mnemonicParsing="false" onAction="#addContents" prefHeight="49.0" prefWidth="96.0" style="-fx-background-color: #212F3D;" text="Submit" textFill="WHITE" BorderPane.alignment="CENTER">
+                                             <BorderPane.margin>
+                                                <Insets bottom="40.0" left="250.0" />
+                                             </BorderPane.margin>
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Button>
+                                       </left>
+                                    </BorderPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

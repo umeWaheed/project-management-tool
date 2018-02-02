@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.startController">
+   <center>
+      <Pane prefHeight="519.0" prefWidth="568.0" style="-fx-background-color: #212F3D;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="582.0" prefWidth="612.0" style="-fx-background-color: #B3B6B7;">
+               <children>
+                  <Pane layoutY="-1.0" prefHeight="586.0" prefWidth="206.0" style="-fx-background-color: #212F3D;">
+                     <children>
+                        <ImageView fitHeight="144.0" fitWidth="200.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+                        <Pane layoutY="33.0" prefHeight="161.0" prefWidth="205.0" style="-fx-background-color: #2E4053;">
+                           <children>
+                              <ImageView fitHeight="102.0" fitWidth="170.0" layoutX="21.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@logo.PNG" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Label layoutX="20.0" layoutY="281.0" prefHeight="35.0" prefWidth="67.0" text="Login" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="364.0" text="Password" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="7.0" layoutY="316.0" prefHeight="35.0" prefWidth="186.0" style="-fx-background-color: #B3B6B7;" />
+                        <PasswordField layoutX="7.0" layoutY="400.0" prefHeight="35.0" prefWidth="186.0" style="-fx-background-color: #B3B6B7;" />
+                     </children>
+                  </Pane>
+                  <Button fx:id="add" layoutX="319.0" layoutY="177.0" mnemonicParsing="false" onAction="#switchPage" prefHeight="59.0" prefWidth="122.0" style="-fx-background-color: #212F3D;" text="Add New Project" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="resume" layoutX="322.0" layoutY="265.0" mnemonicParsing="false" onAction="#resumeProject" prefHeight="59.0" prefWidth="122.0" style="-fx-background-color: #212F3D;" text="Resume Project" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

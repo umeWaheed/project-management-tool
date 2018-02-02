@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="622.0" style="-fx-background-color: #212F3D;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MonitorController">
+   <center>
+      <Pane prefHeight="609.0" prefWidth="622.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="13.0" layoutY="10.0" prefHeight="584.0" prefWidth="599.0" style="-fx-background-color: #B3B6B7;">
+               <children>
+                  <Pane prefHeight="76.0" prefWidth="603.0" style="-fx-background-color: #212F3D;">
+                     <children>
+                        <Label layoutX="122.0" layoutY="9.0" prefHeight="56.0" prefWidth="171.0" text="Add New Project" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="56.0" fitWidth="117.0" layoutX="3.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@logo.PNG" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="186.0" layoutY="97.0" text="Monitoring" textFill="#212f3d">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <TabPane layoutX="6.0" layoutY="138.0" prefHeight="444.0" prefWidth="587.0" style="-fx-background-color: #B3B6B7;" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Monitor">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ScrollPane prefHeight="290.0" prefWidth="591.0">
+                                       <content>
+                                          <GridPane prefHeight="283.0" prefWidth="571.0" style="-fx-background-color: ##212F3D;">
+                                             <children>
+                                                <Label prefHeight="23.0" prefWidth="73.0" text=" Req. Serial#" textFill="#212f3d">
+                                                   <font>
+                                                      <Font name="Berlin Sans FB" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="48.0" prefWidth="123.0" text="end date" GridPane.columnIndex="2">
+                                                   <font>
+                                                      <Font name="Berlin Sans FB" size="12.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets left="10.0" />
+                                                   </padding>
+                                                </Label>
+                                                <Label text="Status" GridPane.columnIndex="3">
+                                                   <font>
+                                                      <Font name="Berlin Sans FB" size="17.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets left="20.0" />
+                                                   </padding>
+                                                </Label>
+                                                <Label text="code file" GridPane.columnIndex="4">
+                                                   <font>
+                                                      <Font name="Berlin Sans FB" size="18.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets left="10.0" />
+                                                   </padding>
+                                                </Label>
+                                                <Label layoutX="169.0" layoutY="10.0" prefHeight="48.0" prefWidth="123.0" text="start date" GridPane.columnIndex="1">
+                                                   <font>
+                                                      <Font name="Berlin Sans FB" size="12.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets left="10.0" />
+                                                   </padding>
+                                                </Label>
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="10.0" prefWidth="71.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="435.0" minWidth="10.0" prefWidth="89.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="435.0" minWidth="10.0" prefWidth="137.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="435.0" minWidth="10.0" prefWidth="106.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="435.0" minWidth="10.0" prefWidth="78.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints maxHeight="126.0" minHeight="5.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="338.0" minHeight="0.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="352.0" minHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="352.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="352.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="352.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                       </content>
+                                    </ScrollPane>
+                                    <Button layoutX="2.0" layoutY="357.0" mnemonicParsing="false" onAction="#drawChart" text="draw chart" />
+                                    <Button fx:id="next4" layoutX="523.0" layoutY="360.0" mnemonicParsing="false" onAction="#switchPage" text="next" />
+                                    <Button layoutX="255.0" layoutY="360.0" mnemonicParsing="false" onAction="#monitor" text="monitor" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

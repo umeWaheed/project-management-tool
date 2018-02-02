@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="513.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.startController">
+   <bottom>
+      <Pane prefHeight="71.0" prefWidth="699.0" style="-fx-background-color: #212F3D;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="next2" layoutX="607.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchPage" text="Next" />
+            <Button fx:id="back" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchPage" text="Back" />
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>
